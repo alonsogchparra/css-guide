@@ -22,3 +22,29 @@ We use **clear** to affect **float**, this will correct the way how will behavio
 ## Overflow
 - Adding **overflow:hidden** to a element, will affect the child element
 
+## Background
+- When you use an image as background, this will be position fixed as default.
+- Background has many components, but you can reduce all of them in one element, if you know the elements order, I will give two cases that will be helpfull to work with it
+```
+background: url position/size repeat origin clip attachment
+```
+Code Example:
+```
+background: url("images/image.jpg") left 10% bottom 20%/cover no-repeat border-box;
+```
+Other example with more elements
+```
+background: linear-gradient, url position/size repeat origin clip attachment, one color
+```
+Code Example:
+```
+background: linear-gradient(to top, rgba(80,60,18, 0.6) 10%, transparent), url("images/image.jpg") left 10% bottom 20%/cover no-repeat border-box, #ffffff;
+```
+
+## IMG (tag)
+The img tag it doesn't matter about the parent tag size has it (That's why the image shows up with the original size). To resize the img according to parent tag:
+- The parent element should have this ```display: inline-block```
+- Use the height or width that you wish indicated
+- You can use on img tag the height or width (**Remember if you using height on img the parent have to use the same, and equally with width**).
+- With this it should resize the image according the parent tag
+
