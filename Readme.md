@@ -47,4 +47,18 @@ The img tag it doesn't matter about the parent tag size has it (That's why the i
 - Use the height or width that you wish indicated
 - You can use on img tag the height or width (**Remember if you using height on img the parent have to use the same, and equally with width**).
 - With this it should resize the image according the parent tag
+- If the parent element has **vertical-align: middle** and also has **box-shadow** probably the image would have a white space below. To fix that you can use on child element (The img tag or image class of course) **vertical-align: top** or with **display:block**
+
+## REM (root em) and EM
+- Is normally used on Font size.
+- When **rem** is used on margin, also padding has to do it, for better dynamic results. (**Be careful** when is used on margin).
+- Using **rem** is a very good way to create a dinamically website, it's very recommended.
+- The difference between **rem** and **em** is that **rem** use the root element as base to get the size (**The Root element could be the html or the web browser, that way if someone in their web browser has a font-size's modification on settings, this will be affect the website as well**). And **em** will take the reference size from the closest parent element, and this will affect child element differently to the rest components.
+
+## VW & VH
+- vh means **Viewport Height**
+- vw means **Viewport Width**
+- Besides of using percetange %. This is another good option to work with.
+- Be aware about if you are using **height** and nothing happens, check on devtools if **height** is equal 0. One of the options to fix that is adding on **body** or **html** **height: 100%** (In case the height for any reason is not working).
+
 
