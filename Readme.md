@@ -61,4 +61,8 @@ The img tag it doesn't matter about the parent tag size has it (That's why the i
 - Besides of using percetange %. This is another good option to work with.
 - Be aware about if you are using **height** and nothing happens, check on devtools if **height** is equal 0. One of the options to fix that is adding on **body** or **html** **height: 100%** (In case the height for any reason is not working).
 
+## JS
+- Added **variableName.className** will overwrite the complete class list, so **Be aware** using this.
+- The best option to add and remove classes is with **variableName.classList.** (It has more components than add and remove stuff).
+
 
