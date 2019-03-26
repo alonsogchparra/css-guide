@@ -24,7 +24,7 @@ body {
   top: 0;
   left: 0;
   background: #2ddf5c;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   z-index: 1;
 }
 
@@ -33,14 +33,37 @@ body {
   vertical-align: middle;
 }
 
+.toggle-button {
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__bar {
+  width: 100%;
+  height: 0.2rem;
+  background: black;
+  display: block;
+  margin: 0.6rem 0;
+}
+
 .main-header__brand {
   color: #0e4f1f;
   text-decoration: none;
   font-weight: bold;
-  font-size: 22px;
-  height: 22px;
+  font-size: 1.375rem;
+  height: 1.375rem;
   /* width: 20px; */
   display: inline-block;
+  vertical-align: middle;
 }
 
 .main-header__brand img {
@@ -51,7 +74,7 @@ body {
 .main-nav {
   display: inline-block;
   text-align: right;
-  width: calc(100% - 74px);
+  width: calc(100% - 122px);
   vertical-align: middle;
 }
 
@@ -63,14 +86,15 @@ body {
 
 .main-nav__item {
   display: inline-block;
-  margin: 0 16px;
+  margin: 0 1rem;
 }
 
-.main-nav__item a {
+.main-nav__item a,
+.mobile-nav__item a {
   text-decoration: none;
   color: #0e4f1f;
   font-weight: bold;
-  padding: 3px 0;
+  padding: 0.18rem 0;
 }
 
 .main-nav__item a:hover,
@@ -79,15 +103,18 @@ body {
   border-bottom: 5px solid white;
 }
 
-.main-nav__item--cta a {
+.main-nav__item--cta a,
+.mobile-nav__item--cta a {
   color: white;
   background: #ff1b68;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   border-radius: 8px;
 }
 
 .main-nav__item--cta a:hover,
-.main-nav__item--cta a:active {
+.main-nav__item--cta a:active,
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active {
   color: #ff1b68;
   background: white;
   border: none;
@@ -95,8 +122,8 @@ body {
 
 .main-footer {
   background: black;
-  padding: 32px;
-  margin-top: 48px;
+  padding: 2rem;
+  margin-top: 3rem;
 }
 
 .main-footer__links {
@@ -108,7 +135,7 @@ body {
 
 .main-footer__link {
   display: inline-block;
-  margin: 0 16px;
+  margin: 0 1rem;
 }
 
 .main-footer__link a {
@@ -126,7 +153,7 @@ body {
   color: white;
   font: inherit;
   font-weight: bold;
-  padding: 8px;
+  padding: 0.5rem;
   border: 1.5px solid #0e4f1f;
   border-radius: 8px;
   cursor: pointer;
@@ -140,4 +167,8 @@ body {
 
 .button:focus {
   outline: none;
+}
+
+.open {
+  display: block;
 }
