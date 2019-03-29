@@ -10,6 +10,12 @@ Only need to have basic knowledge about HTML and CSS3 to follow this.
 
 ## Outline
 We use **outline** to avoid the blue border the web browser has for default. Use it on pseudo class **focus** and to avoid the blue border put **none**.
+Example:
+```
+.fooclass:focus {
+  outline: none;
+}
+```
 
 ## Float
 We use **clear** to affect **float**, this will correct the way how will behaviour (Will move the direction as we want without affecting others).
@@ -64,5 +70,22 @@ The img tag it doesn't matter about the parent tag size has it (That's why the i
 ## JS
 - Added **variableName.className** will overwrite the complete class list, so **Be aware** using this.
 - The best option to add and remove classes is with **variableName.classList.** (It has more components than add and remove stuff).
+
+## Media Queries
+- Mobile First (**VERY RECOMMENDED**).
+- If you going with **Mobile First** the original CSS code will be use for mobile and the queries will be use for bigger dispositives.
+- To find a correct **Break Point**. You could check this site [mydevice.io](www.mydevice.io). Check which width are more usual (or more repetitive), this will apply for mobiles, tablets and desktops and take that as a reference.
+- The **OR** operator in Media queries is with comma (,) and the **AND** operator with ```and```.
+- If the media query will have more than one condition, please check these make sense.
+- You can work with portrait and landscape oritantion. But the best way si usin a height (Example: ```min-height: 40rem```).
+- **NOTE**: If you problem to fix the footer, keep it in the bottom of the page. The best recommendention is stablish a **minimum height** (```min-height```) with calculation. Example:
+
+```
+min-height: calc(100vh - 3.5rem - 8rem);
+```
+The first value on the calculation will take the viewport height, teh second one will take the height of nav and the third one of the footer. The value of nav and footer are taken using the devtool. You have to check the original height with the padding and margin (if the nav or footer have them).
+
+Example: The nav from module 10 has a padding the height of the nav according the devtool is **47.938(px)** and the padding top and bottom is **8px** if we sum these values will be **55.938px**. Taking a rounded number will be **56px**. Taking this value to **REM** will be **3.5rem** (The second value of the previous calculation).
+
 
 
