@@ -37,8 +37,8 @@ main {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 1.25rem;
-  font-size: 0.75rem;
+  margin: 1.2rem;
+  font-size: 0.8rem;
   color: white;
   background: #ff5454;
   padding: 0.5rem;
@@ -51,7 +51,7 @@ main {
 .package__info {
   padding: 1rem;
   border: 1px solid #0e4f1f;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: #0e4f1f;
   background: white;
 }
@@ -88,4 +88,31 @@ main {
 
 #premium .package__subtitle {
   color: #bbb;
+}
+
+@media (min-width: 40rem) {
+
+  main {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media (min-width: 1500px) {
+
+  .package {
+    border-left: 4px solid #0e4f1f;
+  }
+
+  #free {
+    border-right: 4px solid #0e4f1f;
+  }
+
+  #free:hover,
+  #free:active {
+    border-right-color: #ff5454;
+  }
+
 }
