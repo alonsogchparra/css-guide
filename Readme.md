@@ -87,5 +87,11 @@ The first value on the calculation will take the viewport height, teh second one
 
 Example: The nav from module 10 has a padding the height of the nav according the devtool is **47.938(px)** and the padding top and bottom is **8px** if we sum these values will be **55.938px**. Taking a rounded number will be **56px**. Taking this value to **REM** will be **3.5rem** (The second value of the previous calculation).
 
+## Checkbox
 
-
+- To make the style on checkbox works, you have to add **appearance:none;**. But remember to add the condition to make work on all web browser
+```
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+```
