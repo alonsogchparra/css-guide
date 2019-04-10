@@ -95,3 +95,8 @@ Example: The nav from module 10 has a padding the height of the nav according th
 -moz-appearance: none;
 appearance: none;
 ```
+
+## Fonts
+
+- It's better work with fonts import them on css file. And if the font will be in all the project you have to create an shared.css file to only be use for that propouse (Not only for font, it's good to have a shared file where the changes are the same in different parts).
+- **line-height** is asociate with **font-family** so when you have to work with this, you have to use int numbers like 1, 2... the line-height will take the int part of you font-size and take that as reference to add the line-height you want. For example your font-size is **19px** and you going to use **line-hegiht: 2** the height will be **38px**. You can check that on devtools.
