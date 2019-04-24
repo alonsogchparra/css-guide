@@ -68,18 +68,21 @@ main {
   .testimonial {
     margin: 3rem auto;
     max-width: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 
   .testimonial__image-container {
     /* display: inline-block is put to the child element get the parent's size, this case width */
-    display: inline-block;
-    vertical-align: middle;
+    /* display: inline-block;
+    vertical-align: middle; */
     width: 66%;
   }
 
   .testimonial__info {
-    display: inline-block;
-    vertical-align: middle;
+    /* display: inline-block;
+    vertical-align: middle; */
     width: 30%;
   }
 
