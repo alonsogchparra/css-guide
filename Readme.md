@@ -100,3 +100,40 @@ appearance: none;
 
 - It's better work with fonts import them on css file. And if the font will be in all the project you have to create an shared.css file to only be use for that propouse (Not only for font, it's good to have a shared file where the changes are the same in different parts).
 - **line-height** is asociate with **font-family** so when you have to work with this, you have to use int numbers like 1, 2... the line-height will take the int part of you font-size and take that as reference to add the line-height you want. For example your font-size is **19px** and you going to use **line-hegiht: 2** the height will be **38px**. You can check that on devtools.
+
+## Flex
+
+- We can divide in tow parts about how handle the elements flex. Flex Container (**Parent**) and Flex Items (**Children**).
+- The Flex Container (**Parent**) elements are:
+```
+display: flex;
+flex-flow:
+justify-content:
+align-content:
+align-items:
+flex-direction:
+```
+- The Flex Items (**Children**) are:
+```
+order:
+flex:
+align-self:
+flex-shrink:
+flex-grow:
+flex-basis:
+```
+- **display:flex;** is row by defect. But this doesn't mean that you don't need **flex-direction** for this.
+- The short way to integrate flex-direction and flex-wrap is with:
+```
+flex-flow: <flex-direction> | <flex-wrap>
+```
+By the way this means the **flex-flow** is a Flex Container (**Parent**)
+- When **flex-direction: row;** the main axis is X (Horizontal) and cross axis is Y (Vertical).
+- When **flex-direction: column;** is the opposite thing.
+- **justify-content** will go with main axis, meanwhile the **align-items** will go with cross axis.
+- **flex-grow** divide the numbre of elements that has this property to fix on the container.
+- **flex-basis** size's value works according the flex-direction row-width | column-height (works with the main axis). Another point to add about this is the **flex-basis** percentage will be handle according to the container
+- The short way to add the syntax about **flex-grow** **flex-shrink** and **flex-basis** is this
+```
+flex: <flex-grow> | <flex-shrink> | <flex-basis>
+```
