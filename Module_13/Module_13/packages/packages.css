@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "AnonymousPro";
-  src: url('anonymousPro-Bold.ttf') format("truetype");
+  src: url('anonymousPro-Bold.ttf');
   font-weight: 700;
 }
 
