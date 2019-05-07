@@ -137,3 +137,25 @@ By the way this means the **flex-flow** is a Flex Container (**Parent**)
 ```
 flex: <flex-grow> | <flex-shrink> | <flex-basis>
 ```
+
+## Grid
+
+- **span** will take the cell's number you put next to it. Example
+```
+grid-column: span 2
+```
+This means that will expand the column in two cells.
+- **display:grid** the default behaviour is row.
+- **justify-content** and **justify-items** will work on X-Axis.
+- **align-items** and **align-content** will work on Y-Axis.
+- **justify-content** and **align-items** the default behaviour is strecth (So this means you can add it if you want to).
+
+## Grid vs Flexbox
+
+- Grid is two dimension positioning, meanwhile Flexbox is one dimension positioning.
+- Grid works with rows and columns
+- Flexbos is used when you have elements in one row or one column.
+
+**IMPORTANT**
+- Grid is used to how distribute the elements. It will create the structure of the containers
+- Meanwhile Flexbox will work with the elements inside the container.
