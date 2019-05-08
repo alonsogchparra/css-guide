@@ -159,3 +159,8 @@ This means that will expand the column in two cells.
 **IMPORTANT**
 - Grid is used to how distribute the elements. It will create the structure of the containers
 - Meanwhile Flexbox will work with the elements inside the container.
+
+## Transform
+- rotate and skew work with degrees **(deg)**
+- translate works with values like **px** or **rem**
+- **overflow:hidden;** will hide the children's elements that overpass the parent's container boundaries.
