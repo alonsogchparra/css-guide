@@ -164,3 +164,21 @@ This means that will expand the column in two cells.
 - rotate and skew work with degrees **(deg)**
 - translate works with values like **px** or **rem**
 - **overflow:hidden;** will hide the children's elements that overpass the parent's container boundaries.
+
+## Future-Proof CSS Code
+- **@supports**: use it for older web browsers who don't support recent elements like **display**
+- Adding varibles on you css code will save a lot of time, also it is well use to make change theme faster
+- To standarize the css code (To avoid problem with the web browers with their configurations) there are two way to handle this, the first one is adding the code with ```* {}``` selector, this will be the manual way to do it. The second option is using normalize.css
+- The best way to write classes or make and standard of it, is this:
+```
+.BLOCK__ELEMENT--MODIFIER
+```
+Example:
+```
+.menu-main__item--size-big
+```
+Example (without ELEMENT):
+```
+.button--success
+```
+- To know if some element needs prefixes there are two options (probabl more) to check this out. The first one is visiting this web site [shouldiprefix.com](http://shouldiprefix.com/). This page will show you which element needs prefix. The other option is with autoprefixer with this you can add it on your project following the step for your project the othe is using the online version [autoprefixer.github.io](https://autoprefixer.github.io/)
