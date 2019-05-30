@@ -10,6 +10,19 @@
 
 @mixin media-min-width($width) {
   @media (min-width: $width) {
-    @content
+    @content;
   }
+}
+
+html {
+  font-size: 94.75%;
+
+  @include media-min-width(40rem) {
+    font-size: 125%
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
