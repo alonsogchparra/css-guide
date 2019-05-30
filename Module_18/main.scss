@@ -26,3 +26,26 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
+
+.container {
+  @include display-flex();
+  flex: {
+    direction: column;
+    wrap: nowrap;
+  }
+  align-items: center;
+  padding: $size-default * 3 0;
+  box-sizing: border-box;
+}
+
+.sass-section {
+
+}
+
+.sass-introduction {
+
+}
+
+.sass-details {
+
+}
