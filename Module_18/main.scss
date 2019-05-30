@@ -59,3 +59,40 @@ body {
   @extend .sass-section;
   margin: $size-default * 2 0;
 }
+
+.section-header {
+  border-bottom: $size-tiny / 4 solid map-get($colors, main);
+
+  h1 {
+    margin: 0 0 $size-default 0;
+  }
+}
+
+.documentation-links {
+  list-style: none;
+  margin: $size-default 0 0 0;
+  padding: 0;
+  @include display-flex();
+  flex-direction: column;
+
+  li {
+    margin: $size-tiny 0;
+    background: white;
+  }
+
+  .documentation-link {
+    text-decoration: none;
+    color: map-get($colors, main);
+    display: block;
+    padding: $size-tiny;
+    border: $border-default;
+
+    &:hover,
+    &:active {
+      color: white;
+      background: map-get($colors, secondary);
+      border-color: map-get($colors, secondary);
+    }
+  }
+
+}
