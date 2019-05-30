@@ -182,3 +182,112 @@ Example (without ELEMENT):
 .button--success
 ```
 - To know if some element needs prefixes there are two options (probabl more) to check this out. The first one is visiting this web site [shouldiprefix.com](http://shouldiprefix.com/). This page will show you which element needs prefix. The other option is with autoprefixer with this you can add it on your project following the step for your project the othe is using the online version [autoprefixer.github.io](https://autoprefixer.github.io/)
+
+## Sass
+
+- The partials files they start with **_** example: **_variables.scss**
+- the variables start with $ example: **$colors**
+- You can asign many colors on the same variable
+```
+$colors: (main: #521751, secondary: #fa923f);
+```
+and to get the specific color is with **map-get** example:
+```
+background: map-get($colors, main);
+```
+- If you have use some elements over and over again, to make it easier **@mixin** is the answer.
+```
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+```
+Then you can include it this way
+```
+.container {
+  @include display-flex();
+}
+```
+
+Also the mixin could be use for a function example with **@media**
+```
+@mixin media-min-width($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+```
+Adding a variable like **$width** and **@content** makes this **@mixin** dynamical example
+```
+html {
+  font-size: 94.75%;
+
+  @include media-min-width(40rem) {
+    font-size: 125%
+  }
+}
+```
+- You can make the color that you already using more darker or ligther with **darken** and **lighten** respectively
+```
+background: lighten(map-get($colors, main), 72%);
+```
+- You can create a class with elements that will be use in other class and makes the code more readable and easier to execute
+```
+.sass-section {
+  border: $border-default;
+  background: lighten(map-get($colors, main), 72%);
+  padding: $size-default * 2;
+  text-align: center;
+  width: 90%;
+
+  @include media-min-width(40rem) {
+    width: 30rem;
+  }
+}
+```
+and to add in the class you can use **@extend**
+```
+.sass-introduction {
+  @extend .sass-section;
+  box-shadow: $size-tiny $size-tiny $size-tiny / 2 #ccc;
+}
+
+.sass-details {
+  @extend .sass-section;
+  margin: $size-default * 2 0;
+}
+```
+
+**Observation:** This class is not on the html file but you can use it in others classes without a problem
+
+- It doesn't matter how elements you have you can add it inside of the parent element
+```
+.documentation-links {
+  list-style: none;
+  margin: $size-default 0 0 0;
+  padding: 0;
+  @include display-flex();
+  flex-direction: column;
+
+  li {
+    ...
+  }
+
+  .documentation-link {
+    ...
+  }
+}
+```
+- Also to make the code leaner you ca use **&** to make the hover or active effect as example
+```
+.documentation-links {
+
+  ...
+
+    &:hover,
+    &:active {
+      ...
+    }
+}
