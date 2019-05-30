@@ -39,13 +39,23 @@ body {
 }
 
 .sass-section {
+  border: $border-default;
+  background: lighten(map-get($colors, main), 72%);
+  padding: $size-default * 2;
+  text-align: center;
+  width: 90%;
 
+  @include media-min-width(40rem) {
+    width: 30rem;
+  }
 }
 
 .sass-introduction {
-
+  @extend .sass-section;
+  box-shadow: $size-tiny $size-tiny $size-tiny / 2 #ccc;
 }
 
 .sass-details {
-
+  @extend .sass-section;
+  margin: $size-default * 2 0;
 }
