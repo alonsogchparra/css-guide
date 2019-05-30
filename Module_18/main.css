@@ -1,0 +1,21 @@
+.char-highlight {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #521751;
+}
+
+html {
+  font-size: 94.75%;
+}
+@media (min-width: 40rem) {
+  html {
+    font-size: 125%;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
